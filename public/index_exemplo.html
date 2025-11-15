@@ -50,17 +50,3 @@
     </script>
 </body>
 </html>
-
-<?php 
-require_once __DIR__ . '/../config/db.php'; 
-// rota no formato ?entidade=livro&acao=listar 
-$entidade = isset($_GET['entidade']) ? $_GET['entidade'] : 'home'; 
-$acao     = isset($_GET['acao']) ? $_GET['acao'] : 'index'; 
-$arquivo = __DIR__ . '/../src/controller/' . $entidade . '_' . $acao . 
-'.php'; 
-if (file_exists($arquivo)) { 
-require $arquivo; 
-} else { 
-http_response_code(404); 
-echo '<script>console.log("Rota não encontrada!");'; 
-} 
