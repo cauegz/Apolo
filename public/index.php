@@ -21,16 +21,16 @@
             <h2 class="titulo-ranking">Ranking</h2>
         </aside>
         <div class="botoes-main">
-            <button type="button" class="botao-main">Avaliações</button>
-            <button type="button" class="botao-main">Filmes</button>
-            <button type="button" class="botao-main">Gêneros</button>
+            <button type="button" class="botao-main"><a href="">Avaliações</a></button>
+            <button type="button" class="botao-main"><a href="filmes.html">Filmes</a></button>
+            <button type="button" class="botao-main"><a href="">Gêneros</a></button>
         </div>
         <div class="filmes-main" id="filmes-main-id">
             <img src="images/cartaz0.png" id="img-cartaz-id" class="img-cartaz">
         </div>
     </main>
     <script>
-        const MAXFILMES = 2;
+        const MAXFILMES = 3;
         filme = 1;
         function trocaCartaz(){
             img = document.getElementById('img-cartaz-id');

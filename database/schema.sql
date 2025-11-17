@@ -22,7 +22,7 @@ CREATE TABLE ALUNO (
 
 
 CREATE TABLE FILME (
-    id_filme INT PRIMARY KEY,
+    id_filme INT PRIMARY KEY AUTO_INCREMENT,
     nome_filme VARCHAR(100) NOT NULL UNIQUE, 
     diretor VARCHAR(150),
     descricao VARCHAR(300),

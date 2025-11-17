@@ -1,0 +1,74 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+header{
+    background-color: #262C3D;
+    width: 100vw;
+    height: 15vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icone-usuario{
+    font-size: 50pt;
+}
+
+.icone-usuario:hover{
+    cursor: pointer;
+}
+
+.login-cabecalho{
+    margin-left: 72%;
+    display: flex;
+    align-items: center;
+}
+
+body{
+    color: #C3C3C3;
+    background-color: #9282A8;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    display: flex;
+    flex-direction: column-reverse; 
+}
+
+main{
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    gap: 20%;
+    margin-top: 5%;
+}
+
+.titulo-cabecalho{
+    font-size: 50pt;
+}
+
+a{
+    text-decoration: none !important;
+    color: #C3C3C3;
+}
+
+.conteudo_crud{
+    display: flex;
+    font-size: 30pt;
+    height: 50vh;
+    width: 50vw;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid red;
+    color: white;
+}
+
+.conteudo_crud input{
+    width: 100px;
+    height: 30px;
+}
+
+.conteudo_crud label{
+    display: flex;
+    align-items: center;
+}

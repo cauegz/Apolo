@@ -1,8 +1,7 @@
 <?php 
-require_once __DIR__ . '/../dao/avfilmDAO.php'; 
-$dao = new avfilmDAO(); 
+require_once __DIR__ . '/../dao/FilmeDAO.php'; 
+$dao = new FilmeDAO(); 
 
-// carregar lista de gêneros para o select
 $generos = $dao->listarGeneros();
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') { 
@@ -17,32 +16,29 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if ($diretor === '') $erros[] = 'Diretor é obrigatório'; 
     if ($ano_lancamento === '' || !ctype_digit($ano_lancamento)) $erros[] = 'Ano de lançamento deve ser numérico'; 
 
-    // validar que o gênero selecionado existe
     $validGeneroIds = array_map('strval', array_column($generos, 'id_genero'));
     if ($id_genero === '' || !in_array((string)$id_genero, $validGeneroIds)) {
         $erros[] = 'Gênero inválido';
     }
 
     if (empty($erros)) { 
-        $dao->criarFilme(null, $nome_filme, $diretor, $descricao, (int)$ano_lancamento, (int)$id_genero); 
+        $dao->criarFilme($nome_filme, $diretor, $descricao, (int)$ano_lancamento, (int)$id_genero); 
         header('Location: ?entidade=filme&acao=listar'); 
         exit; 
     } 
 } 
 
-echo '<h1>Novo Filme</h1>'; 
+
 if (!empty($erros)) { 
     echo '<div style="color:red;">'.implode('<br>', array_map('htmlspecialchars', $erros)).'</div>'; 
 } 
 
-// renderizar formulário com select de gêneros
-echo '<form method="post"> 
-<label>Nome: <input type="text" name="nome_filme"></label><br> 
-<label>Diretor: <input type="text" name="diretor"></label><br> 
-<label>Descrição: <input type="text" name="descricao"></label><br> 
-<label>Ano de Lançamento: <input type="text" name="ano_lancamento"></label><br> 
-<label>Gênero: <select name="id_genero" id="id_genero" title="Escolha um gênero">';
-// placeholder
+echo '<main><div class="conteudo_crud"><form method="post" class="form_crud"> 
+<label>Nome: <input type="text" name="nome_filme" class="input_crud"></label>
+<label>Diretor: <input type="text" name="diretor" class="input_crud"></label>
+<label>Descrição: <input type="text" name="descricao" class="input_crud"></label>
+<label>Ano de Lançamento: <input type="text" name="ano_lancamento" class="input_crud"></label>
+<label>Gênero: <select name="id_genero" id="id_genero" title="Escolha um gênero" class="input_crud">';
 echo '<option value="">-- selecione --</option>';
 if (empty($generos)) {
     echo '<option value="" disabled>Nenhum gênero cadastrado</option>';
@@ -51,20 +47,31 @@ if (empty($generos)) {
         echo '<option value="'.htmlspecialchars($g['id_genero']).'">'.htmlspecialchars($g['nome_genero']).'</option>';
     }
 }
-echo '</select></label><br> 
-<button type="submit">Salvar</button> 
-<a href="?entidade=filme&acao=listar">Cancelar</a> 
+echo '</select></label>
+<button type="submit" class="botao_crud">Salvar</button> 
+<a href="?entidade=filme&acao=listar" class="botao_crud">Cancelar</a> 
 </form>';
+echo '<h1>Novo Filme</h1></div></main>'; 
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>filmesadicionar</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Adicionar um filme</title>
+    <link rel="stylesheet" href="../../public/css/style_crud.css">
+    <script src="https://kit.fontawesome.com/c25eca0384.js" crossorigin="anonymous"></script>
 </head>
 <body>
+    <header>
+        <h1 class="titulo-cabecalho"><a href="index.php">Apolo</a>
+        </h1>
+        <div class="login-cabecalho">
+            <i class="fa-solid fa-user icone-usuario"></i>
+            <h3>Registro</h3>
+        </div>
+    </header>
+
    
 </body>
 </html>

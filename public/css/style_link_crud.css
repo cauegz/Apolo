@@ -43,16 +43,6 @@ main{
     font-size: 50pt;
 }
 
-.ranking{
-    background-color: #262C3D;
-    width: 20vw;
-    margin-left: 1%;
-    height: 70vh;
-    text-align: center;
-    padding: 10px;
-    border-radius: 10px;
-}
-
 .botao-main{
     padding: 10px;
     font-size: 18pt;
@@ -83,20 +73,5 @@ a{
     gap: 15%;
     width: 20vw;
     height: 40vh;
-}
-
-.filmes-main{
-    margin: 5%;
-    width: 25vw;
-    height: 35vw;
-    background-color: black;
-    margin-right: 1%;
-    border-radius: 10px;
-}
-
-.img-cartaz{
-    border-radius: 10px;
-    width: 100%;
-    height: 100%;
-    transition: ease-in-out 0.5s;
+    margin-top: 10%;
 }
