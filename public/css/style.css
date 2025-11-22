@@ -1,102 +1,25 @@
-*{
-    margin: 0;
-    padding: 0;
+body {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  background: #f4f4f4;
 }
-
-header{
-    background-color: #262C3D;
-    width: 100vw;
-    height: 15vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.card {
+  max-width: 600px;
+  background: white;
+  padding: 20px;
+  margin: auto;
+  border-radius: 8px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.15);
 }
-
-.icone-usuario{
-    font-size: 50pt;
+a {
+  display: block;
+  margin: 8px 0;
+  color: #0066cc;
+  text-decoration: none;
 }
-
-.icone-usuario:hover{
-    cursor: pointer;
+a:hover {
+  text-decoration: underline;
 }
-
-.login-cabecalho{
-    margin-left: 72%;
-    display: flex;
-    align-items: center;
-}
-
-body{
-    color: #C3C3C3;
-    background-color: #9282A8;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-}
-
-main{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 20%;
-}
-
-.titulo-cabecalho{
-    font-size: 50pt;
-}
-
-.ranking{
-    background-color: #262C3D;
-    width: 20vw;
-    margin-left: 1%;
-    height: 70vh;
-    text-align: center;
-    padding: 10px;
-    border-radius: 10px;
-}
-
-.botao-main{
-    padding: 10px;
-    font-size: 18pt;
-    width: 100%;
-    background-color: #262C3D;
-    color: #C3C3C3;
-    border: 3px solid #C3C3C3;
-    border-radius: 6px;
-    transition: ease-in-out 0.5s;
-}
-
-a{
-    text-decoration: none !important;
-    color: #C3C3C3;
-}
-
-.botao-main:hover{
-    cursor: pointer;
-    transform: scale(1.1);
-    background-color: #353e55;
-}
-
-.botoes-main{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    gap: 15%;
-    width: 20vw;
-    height: 40vh;
-}
-
-.filmes-main{
-    margin: 5%;
-    width: 25vw;
-    height: 35vw;
-    background-color: black;
-    margin-right: 1%;
-    border-radius: 10px;
-}
-
-.img-cartaz{
-    border-radius: 10px;
-    width: 100%;
-    height: 100%;
-    transition: ease-in-out 0.5s;
+h1 {
+  margin-bottom: 10px;
 }

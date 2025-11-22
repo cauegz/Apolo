@@ -33,6 +33,7 @@ if (!empty($erros)) {
     echo '<div style="color:red;">'.implode('<br>', array_map('htmlspecialchars', $erros)).'</div>'; 
 } 
 
+echo '<h1>Novo Filme</h1>'; 
 echo '<main><div class="conteudo_crud"><form method="post" class="form_crud"> 
 <label>Nome: <input type="text" name="nome_filme" class="input_crud"></label>
 <label>Diretor: <input type="text" name="diretor" class="input_crud"></label>
@@ -51,27 +52,24 @@ echo '</select></label>
 <button type="submit" class="botao_crud">Salvar</button> 
 <a href="?entidade=filme&acao=listar" class="botao_crud">Cancelar</a> 
 </form>';
-echo '<h1>Novo Filme</h1></div></main>'; 
+echo '</div></main>'; 
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
+    <style>
+        .form_crud{
+            display:flex;
+            flex-direction:column;
+            width: 10%;
+        }
+    </style>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Adicionar um filme</title>
-    <link rel="stylesheet" href="../../public/css/style_crud.css">
     <script src="https://kit.fontawesome.com/c25eca0384.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <header>
-        <h1 class="titulo-cabecalho"><a href="index.php">Apolo</a>
-        </h1>
-        <div class="login-cabecalho">
-            <i class="fa-solid fa-user icone-usuario"></i>
-            <h3>Registro</h3>
-        </div>
-    </header>
 
-   
 </body>
 </html>
