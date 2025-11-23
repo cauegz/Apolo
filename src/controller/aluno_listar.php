@@ -9,6 +9,7 @@ $dao = new AlunoDAO();
 $alunos = $dao->listarTodos();
 
 // Exibe o título e o link para criar novo
+echo '<div id="form">';
 echo '<h1>Alunos</h1>';
 echo '<a href="?entidade=aluno&acao=criar">Novo Aluno</a>';
 
@@ -35,4 +36,16 @@ foreach ($alunos as $a) {
 }
 
 echo '</table>';
+echo '<br> <a href="index.php">Voltar</a>';
+echo '</div>';
 ?>
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Listar Alunos</title>
+    <link rel="stylesheet" href="css/style_listar.css">
+</head>
+<body>
+</body>
+</html>

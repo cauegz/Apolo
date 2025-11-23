@@ -40,4 +40,5 @@ $filmes = $dao->listarTodosFilmes();
             </td>
         </tr>
     <?php endforeach; ?>
+    <br> <a href="index.php">Voltar</a>
 </table>
